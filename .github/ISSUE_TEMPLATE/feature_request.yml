@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a workflow or product improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the user need without including confidential source documents.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Related workflow
+      options:
+        - OCR capture
+        - Text editing
+        - Table editing
+        - Export
+        - Templates
+        - Accessibility
+        - Privacy or security
+        - Other
+    validations:
+      required: true

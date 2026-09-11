@@ -1,0 +1,80 @@
+name: Bug report
+description: Report a reproducible TextRay AI problem without sharing private content.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve TextRay AI. This is a public issue. Do not attach confidential documents, OCR output, or screenshots containing personal information.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Find this on edge://extensions or chrome://extensions.
+      placeholder: 4.3.0
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Microsoft Edge
+        - Google Chrome
+        - Another Chromium browser
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser version
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow
+      options:
+        - Area selection OCR
+        - Image context-menu OCR
+        - Text results
+        - Table results
+        - Export
+        - Templates
+        - Installation or permissions
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use a public or sanitized example when possible.
+      placeholder: |
+        1. Opened a regular HTTPS webpage
+        2. Selected an area containing English text
+        3. Observed ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and error text
+      description: Paste only non-sensitive error text. Remove page content and identifiers.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed confidential documents, OCR output, personal data, secrets, and access tokens from this report.
+          required: true
