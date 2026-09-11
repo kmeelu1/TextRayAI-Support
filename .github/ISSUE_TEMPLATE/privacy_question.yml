@@ -1,0 +1,24 @@
+name: Privacy question
+description: Ask about TextRay AI data handling without sharing private content.
+title: "[Privacy]: "
+labels:
+  - privacy
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This request is public. Do not include documents, OCR output, screenshots containing personal information, account details, secrets, or access tokens.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Describe the data-handling question in general terms.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private documents, personal data, secrets, and captured text from this request.
+          required: true
